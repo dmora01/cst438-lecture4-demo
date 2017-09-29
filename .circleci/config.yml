@@ -3,11 +3,13 @@ jobs:
    build:
      working_directory: ~/cst438-lecture4-demo
      docker:
-       - image: circleci/node:4.8.2
+       - image: circleci/node:4.8.2 
+        
+        
      steps:
       - checkout
       - run:
-          name: update-npm
+          name: update-npmgi
           command: 'sudo npm install -g npm@3.10.10'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
