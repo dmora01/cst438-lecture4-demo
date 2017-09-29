@@ -9,7 +9,7 @@ jobs:
      steps:
       - checkout
       - run:
-          name: update-npmgi
+          name: update-npm
           command: 'sudo npm install -g npm@3.10.10'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
